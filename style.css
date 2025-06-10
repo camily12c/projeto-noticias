@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Ïnter, sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing:antialiased;
 }
 
@@ -60,7 +60,7 @@ header nav.mobile {
     padding: 1.5rem;
     gap: 1.5rem;
 
-    transition: 0.7s;
+    transition: right 0.7s ease;
 }
 
 header nav.mobile.abrir {
@@ -77,6 +77,10 @@ header .mobile a {
         color: var(--dark-blue);
         font-size: 1.125rem;
         line-height: 1.5rem;
+    }
+
+    header .desktop {
+        display: none;
     }
 
 main {
@@ -130,7 +134,7 @@ main {
     font-size: 2rem;
     line-height: 100%;
   }
-.maqrgin-border-padding {
+.margin-border-padding {
     border: 1px solid var(--gunmetal);
     margin-bottom: 1.75rem;
     padding-bottom: 1.75rem;
@@ -146,7 +150,7 @@ main {
 
   .segunda-secao p {
     color: var(--silver);
-    font-size: 0.9375;
+    font-size: 0.9375rem;
     line-height: 1.625rem;
   }
 
@@ -182,6 +186,27 @@ main {
   }
 
   @media(min-width: 1110px) {
+
+    header > button {
+        display: none;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmetal);
+    }
+
+header .desktop a:hover {
+    color: var(--vermillion);
+}
+
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -208,23 +233,24 @@ main {
         font-size: 3.5rem;
     }
 
+    .primeira-secao button {
+        background-color: var(--dark-blue);
+    }
+
     .segunda-secao h2 {
         font-size: 2.5rem;
     }
 
-    header > button {
-        display: none;
-    }
-
-    header .desktop {
-        display: flex;
-        gap: 2.5rem;
-    }
-
-    header .desktop a {
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
+    .terceira-secao a {
         text-decoration: none;
-        color: var(--gunmetal);
+    }
+
+    .terceira-secao {
+        display: flex;
+        grid-column: 1 / 4;
+    }
+
+    .terceira-secao a:hover {
+        color: var(--vermillion);
     }
   }
